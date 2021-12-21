@@ -5,7 +5,8 @@ const numList = [];
 const rightNum = [];
 
 // definisco le variabili di collegamento all'html
-const outputHtml = document.querySelector('.output');
+const outputHtml = document.querySelector('.numbers');
+const result = document.querySelector('.result');
 
 // funzione per generare numeri random
 getRandomNumber = (min, max) => Math.floor(Math.random() * ((max + 1) - min)) + min;
@@ -23,6 +24,8 @@ setTimeout(() => {
         }
     }
 }, 31000)
+
+setTimeout(() => result.append(`Hai ricordato i seguenti numeri: ${rightNum}, score: ${rightNum.length} / 5`), 32000);
 
 // genero 5 numeri casuali ed unici e li stampo in output
 for(let i = 0; i < 5; i++){

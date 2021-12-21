@@ -8,6 +8,10 @@
     display: none;
 }
 /* end utility */
+body{
+    background-color: #083b4c;
+    padding: 30px;
+}
 .output{
     font-size: 40px;
     font-family: sans-serif;
@@ -15,4 +19,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
+}
+#title{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+.result{
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 5px;
 }
