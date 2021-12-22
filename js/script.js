@@ -1,4 +1,4 @@
-let userNum;
+
 // dichiaro l'array dei numerio casuali
 const numList = [];
 // dichiaro l'array dei numeri indovinati
@@ -17,18 +17,20 @@ setTimeout(() =>{
 
 // chiedo all'utente di riscrivere i numeri visti a schermo
 setTimeout(() => {
+    let userNum;
     for(let i = 0; i < 5; i++) {
         userNum = parseInt(prompt('Inserisci uno alla volta i numeri appena visti'));
         if(numList.includes(userNum)) {
             rightNum.push(userNum);
         }
     }
+    return userNum;
 }, 31000)
 
 setTimeout(() => result.append(`Hai ricordato i seguenti numeri: ${rightNum}, score: ${rightNum.length} / 5`), 32000);
 
 // genero 5 numeri casuali ed unici e li stampo in output
-for(let i = 0; i < 5; i++){
+while(numList.length < 5){
     let n = getRandomNumber(1, 100);
     if(!numList.includes(n)){
         numList.push(n);
